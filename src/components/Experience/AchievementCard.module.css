@@ -38,11 +38,6 @@
   background: linear-gradient(135deg, var(--glass-bg) 0%, rgba(212, 165, 116, 0.1) 100%);
 }
 
-.achievementIcon {
-  font-size: 3.5rem;
-  margin-bottom: var(--space-2);
-}
-
 .achievementTitle {
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
@@ -84,10 +79,6 @@
 @media (max-width: 768px) {
   .achievementCard {
     padding: var(--space-4);
-  }
-
-  .achievementIcon {
-    font-size: 3rem;
   }
 
   .achievementTitle {

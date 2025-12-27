@@ -57,7 +57,6 @@ export const achievements = [
     event: "ImaGenAI",
     organization: "IIT Delhi",
     date: "2024",
-    icon: "🥉",
     featured: true,
     description: "Secured 3rd place in IIT Delhi's prestigious ImaGenAI hackathon"
   },
@@ -66,7 +65,6 @@ export const achievements = [
     title: "Best Team Collaboration",
     event: "Hack-A-League 3.0",
     date: "2024",
-    icon: "🏆",
     description: "Awarded Best Team Collaboration at Hack-A-League 3.0"
   },
   {
@@ -74,7 +72,6 @@ export const achievements = [
     title: "Top 10",
     event: "NYD Hackathon (Multilingual RAG)",
     date: "2024",
-    icon: "🔝",
     description: "Individual entry - Secured Top 10 position with Multilingual RAG system"
   },
   {
@@ -83,7 +80,6 @@ export const achievements = [
     event: "Zenathon: Code the Next AI Revolution",
     organization: "Oraczen",
     date: "2025",
-    icon: "⭐",
     description: "Selected among Top 7 teams. Won merch and goodies."
   },
   {
@@ -92,7 +88,6 @@ export const achievements = [
     event: "Yuvahan 2025",
     organization: "ARAI-AMTIF",
     date: "2025",
-    icon: "🚀",
     description: "Selected among 16 teams out of 300+, receiving mentorship to develop the project into a startup"
   },
   {
@@ -101,7 +96,6 @@ export const achievements = [
     event: "AMD's AI Sprint Hackathon",
     organization: "IIT Bombay",
     date: "2024",
-    icon: "💻",
     description: "Selected out of 6000+ participants for development phase"
   }
 ];
@@ -130,8 +124,16 @@ export const leadership = [
     startDate: "Feb 2024",
     endDate: "Present",
     current: true,
-    icon: "🤖",
     description: "Leading the AI Club, organizing workshops, hackathons, and technical sessions"
+  },
+  {
+    id: "varsity-care",
+    title: "Core Executive",
+    organization: "VarSITy Care",
+    startDate: "Jan 2025",
+    endDate: "Present",
+    current: true,
+    description: "Core executive member working on student welfare and community care initiatives"
   },
   {
     id: "ted-mun",
@@ -140,25 +142,39 @@ export const leadership = [
     startDate: "August 2023",
     endDate: "Present",
     current: true,
-    icon: "🎤",
     description: "Core team member organizing TEDx events and Model United Nations conferences"
   },
   {
     id: "mun",
     title: "Model United Nations",
-    icon: "🏅",
     description: "Multiple awards and Executive Board roles; represented SIT & St. Edward's School at national-level MUN events"
+  },
+  {
+    id: "lcthmun-chair",
+    title: "Co-Chairperson - LCTHMUN 2023",
+    organization: "Loreto Convent School",
+    startDate: "Jun 2023",
+    endDate: "Jun 2023",
+    duration: "1 mo",
+    description: "Led committee sessions and facilitated diplomatic negotiations during the conference"
+  },
+  {
+    id: "edmun-chair",
+    title: "Chairperson - EDMUN 2022",
+    organization: "St. Edward's School, Shimla",
+    startDate: "Oct 2022",
+    endDate: "Oct 2022",
+    duration: "1 mo",
+    description: "Chaired committee proceedings and guided delegates through complex international issues"
   },
   {
     id: "debate",
     title: "Debate",
-    icon: "🎙️",
     description: "Winner, SIT Clash '24; participated in the 25th Annual Slater's Debate (Bishop Cotton School)"
   },
   {
     id: "sports",
     title: "Sports",
-    icon: "🏀",
     description: "Multiple district and inter-school basketball championships and runner-up finishes"
   }
 ];

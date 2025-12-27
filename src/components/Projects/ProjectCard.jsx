@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 import useScrollAnimation from '../../hooks/useScrollAnimation';
-import Badge from '../UI/Badge';
 import styles from './ProjectCard.module.css';
 
 /**
@@ -43,17 +42,6 @@ function ProjectCard({ project, animationDelay = 0 }) {
         
         <p className={styles.description}>{project.shortDescription}</p>
 
-        <div className={styles.techStack}>
-          {project.techStack.slice(0, 4).map((tech, index) => (
-            <Badge key={index} variant="default">
-              {tech}
-            </Badge>
-          ))}
-          {project.techStack.length > 4 && (
-            <Badge variant="default">+{project.techStack.length - 4}</Badge>
-          )}
-        </div>
-
         <div className={styles.actions}>
           {project.liveDemo && (
             <a 
@@ -67,18 +55,16 @@ function ProjectCard({ project, animationDelay = 0 }) {
               <FiExternalLink />
             </a>
           )}
-          {project.github && (
-            <a 
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.iconButton}
-              title="GitHub Repository"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <FiGithub />
-            </a>
-          )}
+          <a 
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.iconButton}
+            title="GitHub Repository"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <FiGithub />
+          </a>
         </div>
       </div>
     </motion.div>

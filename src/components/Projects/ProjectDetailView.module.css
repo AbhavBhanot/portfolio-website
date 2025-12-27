@@ -9,10 +9,18 @@
   margin: 0 auto;
 }
 
+/* Hero Section - Two Column Layout */
+.heroSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  margin-bottom: var(--space-16);
+  align-items: start;
+}
+
 /* Project Image */
 .imageContainer {
   width: 100%;
-  margin-bottom: var(--space-12);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -24,7 +32,33 @@
   height: auto;
   display: block;
   object-fit: cover;
-  max-height: 600px;
+  max-height: 400px;
+}
+
+/* Overview Container */
+.overviewContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Hero Project Links */
+.heroProjectLinks {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-6);
+}
+
+.heroProjectLinks button,
+.heroProjectLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.heroProjectLinks svg {
+  flex-shrink: 0;
 }
 
 /* Sections */
@@ -128,30 +162,25 @@
   color: var(--color-text-primary);
 }
 
-/* Project Links */
-.projectLinks {
-  display: flex;
-  gap: var(--space-4);
-  flex-wrap: wrap;
-  padding-top: var(--space-8);
-  border-top: 1px solid var(--color-border);
-}
-
-.projectLinks button,
-.projectLinks a {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.projectLinks svg {
-  flex-shrink: 0;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .projectDetailView {
     padding: var(--space-8) var(--space-4);
+  }
+
+  .heroSection {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .heroProjectLinks {
+    flex-direction: column;
+  }
+
+  .heroProjectLinks button,
+  .heroProjectLinks a {
+    width: 100%;
+    justify-content: center;
   }
 
   .section {
@@ -179,16 +208,6 @@
     width: 32px;
     height: 32px;
   }
-
-  .projectLinks {
-    flex-direction: column;
-  }
-
-  .projectLinks button,
-  .projectLinks a {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 @media (max-width: 480px) {
@@ -196,8 +215,8 @@
     padding: var(--space-6) var(--space-3);
   }
 
-  .imageContainer {
-    margin-bottom: var(--space-8);
+  .heroSection {
+    gap: var(--space-6);
   }
 
   .sectionTitle {

@@ -15,7 +15,7 @@
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -23,6 +23,7 @@
   .grid {
     max-width: 1300px;
     gap: var(--space-8);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

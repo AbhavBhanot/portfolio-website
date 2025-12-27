@@ -31,18 +31,10 @@
 }
 
 .contactContent {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-8);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   margin-top: var(--space-16);
-}
-
-/* Two-column layout on desktop */
-@media (min-width: 1024px) {
-  .contactContent {
-    grid-template-columns: 400px 1fr;
-    gap: var(--space-12);
-  }
 }
 
 .socialLinks {
@@ -110,8 +102,7 @@
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .contactContent {
-    grid-template-columns: 1fr;
-    gap: var(--space-10);
+    justify-content: center;
   }
 }
 

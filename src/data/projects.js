@@ -5,7 +5,7 @@ export const projects = [
     shortDescription: "Deep learning system for detecting, tracking, and forecasting Vulnerable Road Users using multi-sensor fusion",
     longDescription: "Developed an advanced deep learning system designed to enhance autonomous vehicle safety by detecting, tracking, and forecasting Vulnerable Road Users (VRUs) such as pedestrians and cyclists. The system leverages multi-sensor fusion, combining LiDAR and camera data to achieve robust real-time detection in diverse environmental conditions.",
     category: "Computer Vision",
-    featured: true,
+    featured: false,
     status: "Ongoing",
     date: "2026",
     image: "/projects/vru-detection.jpg",
@@ -34,7 +34,7 @@ export const projects = [
     shortDescription: "Scalable system processing voice, image, and text symptoms in 11+ languages with fine-tuned medical LLMs",
     longDescription: "Built a comprehensive multimodal healthcare diagnostic platform that processes patient symptoms through voice, image, and text inputs across 11+ languages. The system utilizes fine-tuned medical LLMs to provide accurate preliminary diagnoses and health recommendations, making healthcare more accessible globally.",
     category: "Healthcare AI",
-    featured: false,
+    featured: true,
     status: "Completed",
     date: "June 2025",
     image: "/projects/med-ai-care.jpg",
@@ -55,7 +55,7 @@ export const projects = [
       "Deployed on Vercel with Telegram bot integration",
       "Scalable architecture for global healthcare access"
     ],
-    github: "https://github.com/abhavbhanot/mod-ai-care",
+    github: null,
     liveDemo: "https://med-ai-care.vercel.app"
   },
   {
@@ -84,7 +84,7 @@ export const projects = [
       "Project assignment system based on candidate skills",
       "End-to-end recruitment workflow automation"
     ],
-    github: "https://github.com/abhavbhanot/recruitedge-ai",
+    github: null,
     liveDemo: "https://recruitedge-ai.vercel.app"
   },
   {
@@ -116,7 +116,7 @@ export const projects = [
       "Optimized query generation with SQLCoder",
       "Context-aware query suggestions"
     ],
-    github: "https://github.com/abhavbhanot/sql-genius",
+    github: null,
     liveDemo: "https://sqlgenius.vercel.app"
   },
   {
@@ -145,8 +145,8 @@ export const projects = [
       "Context-aware response generation",
       "Top 10 finish in NYD Hackathon"
     ],
-    github: "https://github.com/abhavbhanot/multilingual-rag",
-    liveDemo: null
+    github: null,
+    liveDemo: "https://indian-mythology-chatbot.netlify.app"
   },
   {
     id: "soybean-weed-classification",

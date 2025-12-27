@@ -1,7 +1,9 @@
 .contactInfo {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .infoCard {
@@ -78,16 +80,28 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .contactInfo {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--space-4);
+    max-width: 400px;
   }
 }
 
 @media (max-width: 640px) {
   .contactInfo {
-    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  
+  .infoCard {
+    padding: var(--space-5);
+  }
+  
+  .cardIcon {
+    font-size: var(--text-3xl);
+  }
+  
+  .cardTitle {
+    font-size: var(--text-lg);
   }
 }

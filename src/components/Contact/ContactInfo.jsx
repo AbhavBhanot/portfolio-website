@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa';
 import { personalInfo } from '../../data/personal';
 import Card from '../UI/Card';
 import Button from '../UI/Button';
@@ -32,20 +32,6 @@ function ContactInfo() {
           {personalInfo.contact.email}
         </a>
         <p className={styles.cardDesc}>For professional inquiries and opportunities</p>
-      </Card>
-
-      <Card className={styles.infoCard}>
-        <div className={styles.cardIcon}>
-          <FaPhone />
-        </div>
-        <h3 className={styles.cardTitle}>Mobile</h3>
-        <a 
-          href={`tel:${personalInfo.contact.phone}`}
-          className={styles.cardLink}
-        >
-          {personalInfo.contact.phone}
-        </a>
-        <p className={styles.cardDesc}>Available for calls and messages</p>
       </Card>
 
       <Card className={styles.infoCard}>

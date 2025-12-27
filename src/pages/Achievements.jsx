@@ -64,6 +64,7 @@ const Achievements = () => {
                   {item.startDate && (
                     <p className={styles.cardDate}>
                       {item.startDate} - {item.endDate}
+                      {item.duration && ` • ${item.duration}`}
                     </p>
                   )}
                   <p className={styles.cardDesc}>{item.description}</p>

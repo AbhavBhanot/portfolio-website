@@ -50,20 +50,20 @@ function Header() {
             Projects
           </NavLink>
           <NavLink 
-            to="/skills"
-            className={({ isActive }) => 
-              isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
-            }
-          >
-            Skills
-          </NavLink>
-          <NavLink 
             to="/experience"
             className={({ isActive }) => 
               isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
             }
           >
             Experience
+          </NavLink>
+          <NavLink 
+            to="/skills"
+            className={({ isActive }) => 
+              isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+            }
+          >
+            Skills
           </NavLink>
           <NavLink 
             to="/achievements"
@@ -126,15 +126,6 @@ function Header() {
             Projects
           </NavLink>
           <NavLink 
-            to="/skills"
-            className={({ isActive }) => 
-              isActive ? `${styles.mobileNavLink} ${styles.active}` : styles.mobileNavLink
-            }
-            onClick={closeMobileMenu}
-          >
-            Skills
-          </NavLink>
-          <NavLink 
             to="/experience"
             className={({ isActive }) => 
               isActive ? `${styles.mobileNavLink} ${styles.active}` : styles.mobileNavLink
@@ -142,6 +133,15 @@ function Header() {
             onClick={closeMobileMenu}
           >
             Experience
+          </NavLink>
+          <NavLink 
+            to="/skills"
+            className={({ isActive }) => 
+              isActive ? `${styles.mobileNavLink} ${styles.active}` : styles.mobileNavLink
+            }
+            onClick={closeMobileMenu}
+          >
+            Skills
           </NavLink>
           <NavLink 
             to="/achievements"

@@ -18,7 +18,6 @@ function Home() {
     "description": personalInfo.bio.short,
     "url": "https://abhavbhanot.dev",
     "email": personalInfo.contact.email,
-    "telephone": personalInfo.contact.phone,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": personalInfo.location.city,

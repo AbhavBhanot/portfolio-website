@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import styles from './Footer.module.css';
 
 function Footer() {
@@ -27,8 +27,9 @@ function Footer() {
               <Link to="/" className={styles.footerLink}>Home</Link>
               <Link to="/about" className={styles.footerLink}>About</Link>
               <Link to="/projects" className={styles.footerLink}>Projects</Link>
-              <Link to="/skills" className={styles.footerLink}>Skills</Link>
               <Link to="/experience" className={styles.footerLink}>Experience</Link>
+              <Link to="/skills" className={styles.footerLink}>Skills</Link>
+              <Link to="/achievements" className={styles.footerLink}>Achievements</Link>
               <Link to="/contact" className={styles.footerLink}>Contact</Link>
             </nav>
           </div>
@@ -44,14 +45,6 @@ function Footer() {
               >
                 <FaEnvelope className={styles.contactIcon} />
                 <span>abhavbhanot28@gmail.com</span>
-              </a>
-              <a 
-                href="tel:+917876445994" 
-                className={styles.contactLink}
-                aria-label="Phone"
-              >
-                <FaPhone className={styles.contactIcon} />
-                <span>+91-7876445994</span>
               </a>
             </div>
           </div>

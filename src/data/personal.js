@@ -1,8 +1,8 @@
 export const personalInfo = {
   name: "Abhav Bhanot",
-  title: "AI/ML Engineering Student | Tech Innovator | Interested in anything and everything AI ",
+  title: "Building intelligent systems that solve real-world problems through Gen AI, Machine Learning, and Deep Learning.",
   bio: {
-    short: "Symbiosis Institute of Technology student passionate about building intelligent systems that solve real-world problems through AI, Machine Learning, and Deep Learning.",
+    short: "Building intelligent systems that solve real-world problems through Gen-AI, Machine Learning, NLP, and Deep Learning.",
     paragraphs: [
       "I'm an AI/ML Engineering student at Symbiosis Institute of Technology, passionate about leveraging artificial intelligence to solve complex real-world problems. My journey in tech began with a curiosity about how machines can learn and adapt, leading me to explore deep learning, computer vision, and natural language processing.",
       "Beyond academics, I've participated in numerous hackathons, securing top positions at IIT Delhi's ImaGenAI and other prestigious competitions. I believe in learning by building, which is why I focus on creating deployable AI solutions that make a tangible impact."
@@ -10,7 +10,6 @@ export const personalInfo = {
   },
   contact: {
     email: "abhavbhanot28@gmail.com",
-    phone: "+91-7876445994",
     linkedin: "https://www.linkedin.com/in/abhav-bhanot-52ab2927a/",
     github: "https://github.com/abhavbhanot",
     resume: "/resume.pdf"

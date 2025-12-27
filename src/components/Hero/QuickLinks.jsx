@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { FaUser, FaCode, FaTrophy, FaEnvelope } from 'react-icons/fa';
+import { FaUser, FaCode, FaTrophy, FaEnvelope, FaAward, FaProjectDiagram } from 'react-icons/fa';
 import Card from '../UI/Card';
 import styles from './QuickLinks.module.css';
 import { Link } from 'react-router-dom';
 
 /**
  * QuickLinks section component
- * Displays 4 cards linking to main pages with icons and descriptions
+ * Displays 6 cards linking to main pages with icons and descriptions
  */
 function QuickLinks() {
   const links = [
@@ -19,20 +19,34 @@ function QuickLinks() {
     },
     {
       id: 2,
-      to: '/skills',
-      icon: <FaCode />,
-      title: 'Skills',
-      description: 'Technologies & Tools'
+      to: '/projects',
+      icon: <FaProjectDiagram />,
+      title: 'Projects',
+      description: 'Featured Work & Demos'
     },
     {
       id: 3,
       to: '/experience',
       icon: <FaTrophy />,
       title: 'Experience',
-      description: 'Achievements & Work'
+      description: 'Work & Internships'
     },
     {
       id: 4,
+      to: '/skills',
+      icon: <FaCode />,
+      title: 'Skills',
+      description: 'Technologies & Tools'
+    },
+    {
+      id: 5,
+      to: '/achievements',
+      icon: <FaAward />,
+      title: 'Achievements',
+      description: 'Awards & Recognition'
+    },
+    {
+      id: 6,
       to: '/contact',
       icon: <FaEnvelope />,
       title: 'Contact',
