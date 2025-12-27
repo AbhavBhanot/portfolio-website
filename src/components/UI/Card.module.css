@@ -1,0 +1,54 @@
+/* Card Component Styles */
+
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-smooth);
+  border: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--glass-highlight);
+  opacity: 0.6;
+}
+
+/* Hover effect - handled by Framer Motion */
+.card.hoverable:hover {
+  border-color: rgba(212, 165, 116, 0.3);
+}
+
+/* Interactive card styles */
+.card[role="button"] {
+  cursor: pointer;
+}
+
+/* Focus styles for accessibility */
+.card:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    padding: var(--space-5);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: var(--space-4);
+  }
+}

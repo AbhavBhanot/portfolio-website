@@ -1,0 +1,192 @@
+/* Skills Page Styles */
+
+.skillsPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: var(--space-8) var(--space-4);
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.pageSubtitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-normal);
+}
+
+.skillsContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+@media (min-width: 1280px) {
+  .skillsContent {
+    max-width: 1300px;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .skillsPage {
+    padding: var(--space-7) var(--space-5);
+  }
+
+  .pageHeader {
+    margin-bottom: var(--space-14);
+  }
+
+  .skillsContent {
+    gap: var(--space-14);
+  }
+}
+
+@media (max-width: 768px) {
+  .skillsPage {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .pageHeader {
+    margin-bottom: var(--space-12);
+  }
+
+  .pageTitle {
+    font-size: var(--font-size-4xl);
+  }
+
+  .pageSubtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .skillsContent {
+    gap: var(--space-12);
+  }
+}
+
+@media (max-width: 640px) {
+  .skillsPage {
+    padding: var(--space-5) var(--space-3);
+  }
+
+  .pageHeader {
+    margin-bottom: var(--space-10);
+  }
+
+  .pageTitle {
+    font-size: var(--font-size-3xl);
+  }
+
+  .skillsContent {
+    gap: var(--space-10);
+  }
+}
+
+@media (max-width: 480px) {
+  .skillsPage {
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .pageHeader {
+    margin-bottom: var(--space-8);
+  }
+
+  .pageSubtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .skillsContent {
+    gap: var(--space-8);
+  }
+}
+
+/* Certifications Section */
+.certificationsSection {
+  margin-top: var(--space-8);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.certificationsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.certificationItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.certificationItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-primary);
+}
+
+.certContent {
+  flex: 1;
+}
+
+.certTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.certIssuer {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.certDate {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  margin-left: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .certificationItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .certDate {
+    margin-left: 0;
+  }
+
+  .sectionTitle {
+    font-size: var(--font-size-2xl);
+  }
+}

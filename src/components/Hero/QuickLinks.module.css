@@ -1,0 +1,124 @@
+/* QuickLinks Section Styles */
+
+.quickLinks {
+  padding: var(--space-16) var(--space-6);
+  background-color: var(--color-bg-primary);
+}
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    max-width: 1300px;
+    gap: var(--space-8);
+  }
+}
+
+.linkWrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.quickLinkCard {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  transition: all var(--transition-base);
+}
+
+.quickLinkCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.iconWrapper {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-primary),
+    var(--color-accent-secondary)
+  );
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-3xl);
+  color: var(--color-bg-primary);
+  transition: all var(--transition-base);
+}
+
+.quickLinkCard:hover .iconWrapper {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-2);
+  line-height: var(--line-height-tight);
+}
+
+.cardDescription {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quickLinks {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .quickLinkCard {
+    padding: var(--space-6);
+  }
+
+  .iconWrapper {
+    width: 56px;
+    height: 56px;
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .quickLinkCard {
+    padding: var(--space-5);
+  }
+}

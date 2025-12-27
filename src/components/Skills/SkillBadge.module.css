@@ -1,0 +1,90 @@
+/* SkillBadge Component Styles */
+
+.skillBadge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+/* Subtle hover effect */
+.skillBadge:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-medium);
+  background-color: var(--color-surface-hover);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-accent-tertiary);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: 1.25rem;
+  color: var(--color-accent-secondary);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+
+.level {
+  font-size: var(--font-size-sm);
+  color: var(--color-accent-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  line-height: var(--line-height-normal);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .skillBadge {
+    padding: var(--space-3);
+    gap: var(--space-2);
+  }
+
+  .iconWrapper {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+
+  .name {
+    font-size: var(--font-size-sm);
+  }
+
+  .level,
+  .description {
+    font-size: var(--font-size-xs);
+  }
+}

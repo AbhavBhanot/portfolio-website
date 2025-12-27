@@ -1,0 +1,240 @@
+/* Achievements Page Styles */
+.achievementsPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+}
+
+@media (min-width: 1280px) {
+  .achievementsPage {
+    max-width: 1300px;
+    padding: var(--space-10) var(--space-8);
+  }
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.pageSubtitle {
+  font-size: var(--text-xl);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-normal);
+}
+
+.achievementsContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.section {
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--color-accent-primary);
+  display: inline-block;
+}
+
+.achievementsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.outreachList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.outreachItem {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--glass-shadow);
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.outreachItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--glass-highlight);
+  opacity: 0.5;
+}
+
+.outreachItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px 0 rgba(45, 37, 32, 0.15);
+  border-color: rgba(212, 165, 116, 0.4);
+}
+
+.outreachTitle {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.outreachDesc {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.attendeeBadge {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.experienceCard {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--glass-shadow);
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-smooth);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  position: relative;
+  overflow: hidden;
+}
+
+.experienceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--glass-highlight);
+  opacity: 0.5;
+}
+
+.experienceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px 0 rgba(45, 37, 32, 0.15);
+  border-color: rgba(212, 165, 116, 0.4);
+}
+
+.cardTitle {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.cardOrg {
+  color: var(--color-primary);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--space-2);
+}
+
+.cardDate {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-4);
+}
+
+.cardDesc {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: var(--text-4xl);
+  }
+
+  .pageSubtitle {
+    font-size: var(--text-lg);
+  }
+
+  .achievementsPage {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .section {
+    padding: var(--space-6);
+  }
+
+  .sectionTitle {
+    font-size: var(--text-2xl);
+  }
+
+  .achievementsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .experienceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .outreachItem {
+    padding: var(--space-4);
+  }
+
+  .experienceCard {
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: var(--text-3xl);
+  }
+
+  .achievementsContent {
+    gap: var(--space-8);
+  }
+
+  .section {
+    padding: var(--space-4);
+  }
+}

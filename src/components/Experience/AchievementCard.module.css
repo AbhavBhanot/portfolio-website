@@ -1,0 +1,96 @@
+.achievementCard {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-smooth);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  border: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.achievementCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--glass-highlight);
+  opacity: 0.5;
+}
+
+.achievementCard:hover {
+  box-shadow: 0 12px 40px 0 rgba(45, 37, 32, 0.15);
+  border-color: rgba(212, 165, 116, 0.4);
+  transform: translateY(-4px);
+}
+
+.achievementCard.featured {
+  border-color: rgba(212, 165, 116, 0.5);
+  background: linear-gradient(135deg, var(--glass-bg) 0%, rgba(212, 165, 116, 0.1) 100%);
+}
+
+.achievementIcon {
+  font-size: 3.5rem;
+  margin-bottom: var(--space-2);
+}
+
+.achievementTitle {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.achievementEvent {
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.achievementOrg {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.achievementDate {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+.achievementDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin: var(--space-2) 0 0 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .achievementCard {
+    padding: var(--space-4);
+  }
+
+  .achievementIcon {
+    font-size: 3rem;
+  }
+
+  .achievementTitle {
+    font-size: var(--text-lg);
+  }
+}

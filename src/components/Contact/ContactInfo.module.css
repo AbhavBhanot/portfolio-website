@@ -1,0 +1,93 @@
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.infoCard {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--glass-shadow);
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.infoCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--glass-highlight);
+  opacity: 0.5;
+}
+
+.infoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px 0 rgba(45, 37, 32, 0.15);
+  border-color: rgba(212, 165, 116, 0.4);
+}
+
+.cardIcon {
+  font-size: var(--text-4xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardTitle {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.cardLink {
+  display: block;
+  font-size: var(--text-base);
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-medium);
+  transition: color 0.2s ease;
+}
+
+.cardLink:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.cardDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.downloadButton {
+  margin: var(--space-2) auto;
+  display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .contactInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 640px) {
+  .contactInfo {
+    grid-template-columns: 1fr;
+  }
+}
