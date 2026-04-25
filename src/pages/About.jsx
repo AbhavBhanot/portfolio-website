@@ -2,6 +2,7 @@ import ProfileSection from '../components/About/ProfileSection';
 import Education from '../components/About/Education';
 import Interests from '../components/About/Interests';
 import CoreStrengths from '../components/About/CoreStrengths';
+import ConnectWidget from '../components/About/ConnectWidget';
 import SEO from '../components/SEO/SEO';
 import styles from './About.module.css';
 
@@ -29,6 +30,7 @@ function About() {
           <Education />
           <Interests />
           <CoreStrengths />
+          <ConnectWidget />
         </div>
       </div>
     </>
