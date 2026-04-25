@@ -5,12 +5,10 @@ import { MongoClient } from 'mongodb';
  *
  * Receives { name, email, message } and inserts into MongoDB Atlas.
  *
- * Required environment variable (set in Netlify dashboard → Site → Environment variables):
- *   MONGODB_URI  –  your Atlas connection string, e.g.
- *                   mongodb+srv://<user>:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
+ * Required env var in Netlify dashboard → Site → Environment variables:
+ *   MONGODB_URI = mongodb+srv://<user>:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
  */
 
-// Reuse the MongoClient across warm invocations (connection pooling)
 let cachedClient = null;
 
 async function getClient() {
@@ -18,11 +16,12 @@ async function getClient() {
 
   const uri = process.env.MONGODB_URI;
   if (!uri) {
-    throw new Error('MONGODB_URI environment variable is not set.');
+    throw new Error('MONGODB_URI is not configured. Add it in Netlify → Site → Environment variables.');
   }
 
   const client = new MongoClient(uri, {
-    serverSelectionTimeoutMS: 5000,
+    serverSelectionTimeoutMS: 8000,
+    connectTimeoutMS: 8000,
   });
 
   await client.connect();
@@ -31,12 +30,21 @@ async function getClient() {
 }
 
 export const handler = async (event) => {
-  // Only allow POST
+  // CORS headers so the browser doesn't block the response
+  const headers = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  };
+
+  // Handle preflight
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 204, headers, body: '' };
+  }
+
   if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      body: JSON.stringify({ error: 'Method not allowed' }),
-    };
+    return { statusCode: 405, headers, body: JSON.stringify({ error: 'Method not allowed' }) };
   }
 
   // Parse body
@@ -44,34 +52,23 @@ export const handler = async (event) => {
   try {
     data = JSON.parse(event.body ?? '{}');
   } catch {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: 'Invalid JSON body' }),
-    };
+    return { statusCode: 400, headers, body: JSON.stringify({ error: 'Invalid JSON body' }) };
   }
 
   const { name, email, message } = data;
 
-  // Basic server-side validation
+  // Server-side validation
   if (!name?.trim() || !email?.trim() || !message?.trim()) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: 'name, email, and message are required' }),
-    };
+    return { statusCode: 400, headers, body: JSON.stringify({ error: 'name, email, and message are required' }) };
   }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: 'Invalid email address' }),
-    };
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return { statusCode: 400, headers, body: JSON.stringify({ error: 'Invalid email address' }) };
   }
 
   try {
     const client = await getClient();
-    const db = client.db('portfolio');
-    const collection = db.collection('messages');
+    const collection = client.db('portfolio').collection('messages');
 
     await collection.insertOne({
       name: name.trim(),
@@ -80,15 +77,26 @@ export const handler = async (event) => {
       createdAt: new Date(),
     });
 
-    return {
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ success: true }),
-    };
+    return { statusCode: 200, headers, body: JSON.stringify({ success: true }) };
+
   } catch (err) {
-    console.error('MongoDB insert error:', err);
+    // Reset cached client so the next request gets a fresh connection
+    cachedClient = null;
+
+    console.error('[submit-message] Error:', err.message);
+
+    // Distinguish config errors from runtime errors
+    if (err.message.includes('MONGODB_URI')) {
+      return {
+        statusCode: 503,
+        headers,
+        body: JSON.stringify({ error: 'Service not configured. Please try again later.' }),
+      };
+    }
+
     return {
       statusCode: 500,
+      headers,
       body: JSON.stringify({ error: 'Failed to save message. Please try again.' }),
     };
   }
