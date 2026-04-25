@@ -1,16 +1,39 @@
 export const workExperience = [
   {
+    id: "thoughtmatrix",
+    title: "Data Science & ML Intern (Part-time)",
+    organization: "ThoughtMatrix",
+    location: "Pune, Maharashtra",
+    startDate: "January 2026",
+    endDate: "Present",
+    current: true,
+    description: "Building end-to-end data analysis pipelines and deep learning-based forecasting models over high-dimensional datasets.",
+    highlights: [
+      "Built end-to-end data analysis pipelines over high-dimensional datasets, optimising feature extraction and model inference workflows from scratch",
+      "Architecting and implementing deep learning-based time series forecasting models to predict complex market trends and operational metrics"
+    ],
+    techStack: [
+      "Python",
+      "Deep Learning",
+      "Time Series Forecasting",
+      "Data Pipelines",
+      "Feature Engineering",
+      "Pandas",
+      "NumPy"
+    ]
+  },
+  {
     id: "scaai",
-    title: "AI/ML Project Intern (Full-time)",
+    title: "AI-ML Project Intern (Part-time)",
     organization: "SCAAI - Symbiosis Centre for Applied AI",
     location: "Pune, Maharashtra",
     startDate: "June 2024",
     endDate: "Present",
     current: true,
-    description: "Developed and deployed machine learning, generative AI, and conversational AI solutions using Retrieval-Augmented Generation (RAG) pipelines and agentic workflows for enterprise applications.",
+    description: "Developed and deployed production-grade RAG pipelines and agentic workflows for enterprise knowledge retrieval. Led computer vision research under an international grant.",
     highlights: [
-      "Conducted computer vision research under an international grant, enhancing soybean weed classification accuracy via advanced data augmentation",
-      "Worked with cross-functional teams to optimize models for production, improving inference speed, scalability, and reliability"
+      "Developed and deployed production-grade RAG pipelines and workflows, significantly reducing hallucination rates in enterprise-level knowledge retrieval",
+      "Led research under an international grant for soybean weed classification; utilized advanced data augmentation and CNN architectures to achieve high-precision classification"
     ],
     techStack: [
       "Python",
@@ -31,10 +54,10 @@ export const workExperience = [
     startDate: "May 2025",
     endDate: "July 2025",
     current: false,
-    description: "Conducted research and exploratory tasks in Generative AI, including literature reviews, experimentation, and model benchmarking and LLM Evals (DeepSeek, Qwen, Phi).",
+    description: "Set up local LLM inference environments, engineered benchmarking frameworks for LLM evals, and built document processing pipelines replacing manual workflows.",
     highlights: [
-      "Developed document conversion pipelines for LLM parsing, improving data extraction efficiency from unstructured documents",
-      "Contributed to prototype development and proof-of-concept AI solutions"
+      "Set up and managed local LLM inference environments using Ollama, optimising latency and privacy for on-premise deployments; engineered a benchmarking framework for LLM Evals (DeepSeek, Qwen, Phi)",
+      "Tested and compared document processing (OCR) pipelines that converted unstructured PDF and image data into structured formats — replacing manual workflows entirely"
     ],
     techStack: [
       "Python",
@@ -61,6 +84,30 @@ export const achievements = [
     description: "Secured 3rd place in IIT Delhi's prestigious ImaGenAI hackathon"
   },
   {
+    id: "zenathon",
+    title: "Top 7 Teams",
+    event: "Zenathon: Code the Next AI Revolution",
+    organization: "Oraczen",
+    date: "2025",
+    description: "Selected among Top 7 teams out of hundreds of participants. Won merch and goodies."
+  },
+  {
+    id: "amd-ai-sprint",
+    title: "Selected — 175 of 6,000+",
+    event: "AMD AI Sprint Hackathon",
+    organization: "IIT Bombay",
+    date: "2025",
+    description: "Selected among 175 developers out of 6,000+ applicants for the AMD AI Sprint development phase at IIT Bombay"
+  },
+  {
+    id: "yuvahan",
+    title: "16 of 300+ Teams Selected",
+    event: "Yuvahan 2025",
+    organization: "ARAI-AMTIF",
+    date: "2025",
+    description: "Project selected among 16 out of 300+ teams for startup mentorship and incubation support"
+  },
+  {
     id: "hack-a-league",
     title: "Best Team Collaboration",
     event: "Hack-A-League 3.0",
@@ -72,31 +119,7 @@ export const achievements = [
     title: "Top 10",
     event: "NYD Hackathon (Multilingual RAG)",
     date: "2024",
-    description: "Individual entry - Secured Top 10 position with Multilingual RAG system"
-  },
-  {
-    id: "zenathon",
-    title: "Top 7 Teams",
-    event: "Zenathon: Code the Next AI Revolution",
-    organization: "Oraczen",
-    date: "2025",
-    description: "Selected among Top 7 teams. Won merch and goodies."
-  },
-  {
-    id: "yuvahan",
-    title: "Project Selected",
-    event: "Yuvahan 2025",
-    organization: "ARAI-AMTIF",
-    date: "2025",
-    description: "Selected among 16 teams out of 300+, receiving mentorship to develop the project into a startup"
-  },
-  {
-    id: "amd-ai-sprint",
-    title: "Selected for Development",
-    event: "AMD's AI Sprint Hackathon",
-    organization: "IIT Bombay",
-    date: "2024",
-    description: "Selected out of 6000+ participants for development phase"
+    description: "Individual entry — Secured Top 10 position with Multilingual RAG system"
   }
 ];
 
@@ -119,35 +142,30 @@ export const workshops = [
 export const leadership = [
   {
     id: "ai-club",
-    title: "Co-Head of AI Club",
+    title: "Head of AI Club",
     organization: "Symbiosis Institute of Technology",
-    startDate: "Feb 2024",
+    startDate: "Jan 2026",
     endDate: "Present",
     current: true,
-    description: "Leading the AI Club, organizing workshops, hackathons, and technical sessions"
+    description: "Leading the AI Club — ran hands-on AI workshops for 800+ students and conducted AI sessions for industry professionals"
   },
   {
     id: "varsity-care",
     title: "Core Executive",
-    organization: "VarSITy Care",
-    startDate: "Jan 2025",
+    organization: "VarSITy Care (CSR Club)",
+    startDate: "Aug 2024",
     endDate: "Present",
     current: true,
     description: "Core executive member working on student welfare and community care initiatives"
   },
   {
     id: "ted-mun",
-    title: "Core Team Member - Ted Club/MUN Society",
-    organization: "Symbiosis Institute of Technology",
-    startDate: "August 2023",
+    title: "Core Team Member",
+    organization: "TED Club & MUN Society, SIT",
+    startDate: "Aug 2023",
     endDate: "Present",
     current: true,
     description: "Core team member organizing TEDx events and Model United Nations conferences"
-  },
-  {
-    id: "mun",
-    title: "Model United Nations",
-    description: "Multiple awards and Executive Board roles; represented SIT & St. Edward's School at national-level MUN events"
   },
   {
     id: "lcthmun-chair",

@@ -37,6 +37,11 @@
   margin-top: var(--space-16);
 }
 
+.connectWidgetWrapper {
+  max-width: 760px;
+  margin: var(--space-16) auto 0;
+}
+
 .socialLinks {
   margin-top: var(--space-16);
   text-align: center;

@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Abhav Bhanot",
-  title: "Building intelligent systems that solve real-world problems through Gen AI, Machine Learning, and Deep Learning.",
+  title: "Aspiring AI/ML Solutions Architect | Interested in anything and everything AI",
   bio: {
     short: "Building intelligent systems that solve real-world problems through Gen-AI, Machine Learning, NLP, and Deep Learning.",
     paragraphs: [
@@ -10,8 +10,10 @@ export const personalInfo = {
   },
   contact: {
     email: "abhavbhanot28@gmail.com",
+    phone: "+91-7876445994",
     linkedin: "https://www.linkedin.com/in/abhav-bhanot-52ab2927a/",
-    github: "https://github.com/abhavbhanot",
+    github: "https://github.com/AbhavBhanot",
+    portfolio: "https://abhavbhanot-portfolio.netlify.app",
     resume: "/resume.pdf"
   },
   location: {
@@ -28,13 +30,15 @@ export const personalInfo = {
       gpa: "8.04",
       courses: [
         "DSA",
-        "EDA",
+        "Cloud Computing",
+        "DBMS",
+        "ML Ops",
+        "Open Source",
+        "OS",
         "Machine Learning",
         "Deep Learning",
         "NLP",
-        "Image Processing",
-        "Databases",
-        "ML Ops"
+        "Image Processing"
       ]
     },
     {
@@ -42,7 +46,8 @@ export const personalInfo = {
       institution: "St. Edward's School",
       degree: "CBSE - Class X & XII",
       duration: "March 2009 - April 2023",
-      achievement: "Percentage: 94 and 82.4 respectively"
+      location: "Shimla, India",
+      achievement: "Percentage: 94% and 82.4% respectively"
     }
   ],
   interests: [
@@ -78,8 +83,8 @@ export const personalInfo = {
     },
     {
       id: 6,
-      title: "Cloud Deployments",
-      description: "Scalable AI solutions in production",
+      title: "Cloud & Infrastructure",
+      description: "Scalable AI solutions and cloud deployments",
       icon: "cloud"
     }
   ],

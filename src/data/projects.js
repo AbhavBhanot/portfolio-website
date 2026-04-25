@@ -121,9 +121,9 @@ export const projects = [
   },
   {
     id: "multilingual-rag",
-    title: "Multilingual RAG System",
-    shortDescription: "Advanced RAG system supporting multiple languages for document retrieval and question answering",
-    longDescription: "Developed a sophisticated Retrieval-Augmented Generation system that supports multiple languages for document retrieval and question answering. The system combines vector search with multilingual embeddings to provide accurate responses across language barriers.",
+    title: "RAG Chatbot — Full Stack Cloud Deployment",
+    shortDescription: "Multilingual Retrieval-Augmented Generation system for the Bhagavad Gita, containerised with Docker and deployed globally",
+    longDescription: "Built a multilingual Retrieval-Augmented Generation system for document retrieval and question answering over Bhagavad Gita texts. Containerized the full stack using Docker and deployed globally via Netlify (frontend) and Hugging Face Spaces (backend), enabling zero-downtime scaling. The system combines vector search with multilingual embeddings to provide accurate responses across language barriers.",
     category: "NLP",
     featured: false,
     status: "Completed",
@@ -132,20 +132,23 @@ export const projects = [
     techStack: [
       "Python",
       "LangChain",
+      "Docker",
       "Vector Search",
       "Multilingual Embeddings",
       "RAG",
       "HuggingFace",
-      "FAISS"
+      "FAISS",
+      "Netlify",
+      "Hugging Face Spaces"
     ],
     highlights: [
+      "Full-stack containerised deployment with Docker for zero-downtime scaling",
+      "Global deployment: Netlify (frontend) + Hugging Face Spaces (backend)",
       "Support for multiple languages in retrieval and generation",
       "Advanced vector search with multilingual embeddings",
-      "Efficient document chunking and indexing strategies",
-      "Context-aware response generation",
       "Top 10 finish in NYD Hackathon"
     ],
-    github: null,
+    github: "https://github.com/AbhavBhanot/Bhagavad-Gita-Summarization-and-Verse-Retrieval-RAG-",
     liveDemo: "https://indian-mythology-chatbot.netlify.app"
   },
   {

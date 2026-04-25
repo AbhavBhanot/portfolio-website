@@ -1,5 +1,6 @@
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import ContactInfo from '../components/Contact/ContactInfo';
+import ConnectWidget from '../components/About/ConnectWidget';
 import SEO from '../components/SEO/SEO';
 import { personalInfo } from '../data/personal';
 import styles from './Contact.module.css';
@@ -25,6 +26,10 @@ function Contact() {
         
         <div className={styles.contactContent}>
           <ContactInfo />
+        </div>
+
+        <div className={styles.connectWidgetWrapper}>
+          <ConnectWidget />
         </div>
 
         <section className={styles.socialLinks}>
