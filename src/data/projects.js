@@ -152,6 +152,70 @@ export const projects = [
     liveDemo: "https://indian-mythology-chatbot.netlify.app"
   },
   {
+    id: "speech-style-transfer",
+    title: "Speech Style Transfer System",
+    shortDescription: "Low-resource speech style transfer converting neutral speech to target speaking styles using prosody-based conditioning",
+    longDescription: "A low-resource speech style transfer system that converts neutral speech to target speaking styles such as 'news anchor' and 'podcast energy' using prosody-based conditioning. The system features a dual-channel architecture combining wav2vec2 feature extraction with HiFi-GAN vocoder, supporting CPU-friendly inference under 4GB RAM. Includes synthetic prosody augmentation for data efficiency, a streaming mode for long audio, and an extensible style registry for custom speaking styles.",
+    category: "Speech AI",
+    featured: false,
+    status: "Completed",
+    date: "2025",
+    image: "/projects/speech-style-transfer.jpg",
+    techStack: [
+      "Python",
+      "PyTorch",
+      "wav2vec2",
+      "HiFi-GAN",
+      "Transformers",
+      "Librosa",
+      "ONNX",
+      "Speech Processing",
+      "Prosody Analysis"
+    ],
+    highlights: [
+      "Prosody-based style transfer for low-resource languages",
+      "Synthetic prosody augmentation achieving 10x data efficiency",
+      "CPU-friendly inference with < 4GB RAM requirement",
+      "Streaming mode for processing long audio files",
+      "Extensible style registry supporting custom speaking styles",
+      "Command-line interface and Python API for flexible integration"
+    ],
+    github: "https://github.com/AbhavBhanot/speech-style-transfer",
+    liveDemo: null
+  },
+  {
+    id: "hrtem-lattice-classifier",
+    title: "HRTEM Bravais Lattice Classifier",
+    shortDescription: "Physics-informed deep learning pipeline classifying 14 Bravais lattice types from SAED/HRTEM diffraction patterns",
+    longDescription: "A physics-informed deep learning pipeline that classifies the crystallographic structure of rare-earth orthoferrite materials from simulated SAED and HRTEM diffraction patterns. The system identifies all 14 Bravais lattice types (in Pearson notation) through a three-stage approach: physically accurate SAED pattern synthesis (5,488 patterns across 14 classes), self-supervised pre-training of a dual-channel ResNet encoder (4.66M parameters) using SimCLR with NT-Xent contrastive loss, and fine-tuning with a physics feature fusion module incorporating d-spacing ratios, inter-spot angles, fold symmetry, and crystallographic residuals. Achieves 61.9% validation accuracy with F1 scores of 0.85–0.95 on high-symmetry cubic lattices.",
+    category: "Scientific AI",
+    featured: false,
+    status: "Completed",
+    date: "2025",
+    image: "/projects/hrtem-lattice-classifier.jpg",
+    techStack: [
+      "Python",
+      "PyTorch",
+      "ResNet",
+      "SimCLR",
+      "Self-Supervised Learning",
+      "Streamlit",
+      "Computer Vision",
+      "Crystallography",
+      "Physics-Informed ML"
+    ],
+    highlights: [
+      "Classifies all 14 Bravais lattice types from electron diffraction patterns",
+      "Dual-channel ResNet encoder (4.66M parameters) pre-trained with SimCLR contrastive learning",
+      "Physics feature fusion using d-spacing ratios, inter-spot angles, and fold symmetry",
+      "Synthesized 5,488 physically accurate SAED patterns at ~16ms per pattern",
+      "Best SSL loss of 0.0314 over 50 epochs on 5,320 training patterns",
+      "80.30% confidence on real SAED image inference (oP classification)"
+    ],
+    github: "https://github.com/KushbuAgrawal05/HRTEMlatticeclassifier",
+    liveDemo: "https://hrtemlatticeclassifier-cuudrhxsmatza2cmlktkt8.streamlit.app"
+  },
+  {
     id: "soybean-weed-classification",
     title: "Soybean Weed Classification System",
     shortDescription: "Computer vision system for accurate soybean weed classification using advanced data augmentation",
